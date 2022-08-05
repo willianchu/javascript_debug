@@ -11,10 +11,17 @@
 //   }
 // }
 
+// make more legible
 for (i = 100; i <=200; i++) {
-  answer = i % 3 === 0 && i % 4 === 0 ? "LoopyLighthouse" : i % 3 === 0 ? "Loopy" : i % 4 === 0 ? "Lighthouse" : i;
+  answer = i % 3 === 0 && i % 4 === 0 ? 
+                    "LoopyLighthouse" : i % 3 === 0 ?
+                                            "Loopy" : i % 4 === 0 ?
+                                                     "Lighthouse" : i;
   console.log(answer);
 }
+
+  
+
 
 // original student code
 // for (var x = 100; x <= 200;++x) {
