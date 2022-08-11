@@ -1,6 +1,7 @@
 function singlePeak(arr) {
   let isClimbing = true;
   let lastValue = arr[0];
+  
   for (let i = 1; i < arr.length; i++) {
     if (arr[i] > lastValue) {
      // is climbing
@@ -17,6 +18,7 @@ function singlePeak(arr) {
       continue;
     }
   }
+  return true;
 }
 
 
