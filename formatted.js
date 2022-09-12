@@ -1,20 +1,20 @@
 const whereCanIPark = function(spots, vehicle) {
   for (var row = 0; row < spots.length; row++) {
     for (var column = 0; column < spots[row].length; column++) {
-      console.log(spots[row][column] );
       if (vehicle === "regular" && spots[row][column] === "R") {
-        return [column, row]; 
+        return [column, row]; //You can easily access position of value using this, instead of indexOf!
       } else if ((spots[row][column] === "S" || spots[row][column] === "R") && (vehicle === "small")) {
-      return [column, row];
+        return [column, row];
       } else if ((spots[row][column] === "M" || spots[row][column] === "S" || spots[row][column] === "R") && (vehicle === "motorcycle")){
-      return [column, row];
-      } 
-      // else {
-      //   console.log("never");
+        return [column, row];
+      }
+      // This statement is ending the execution prematurely
+      // else {  
       // return false;
       // }
     }
   }
+  // The program is returning nothing if there is no free spots
 }
 
 console.log(whereCanIPark(

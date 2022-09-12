@@ -1,20 +1,17 @@
 const whereCanIPark = function(spots, vehicle) {
   for (var row = 0; row < spots.length; row++) {
     for (var column = 0; column < spots[row].length; column++) {
-      console.log(spots[row][column] );
       if (vehicle === "regular" && spots[row][column] === "R") {
-        return [column, row]; 
-      } else if ((spots[row][column] === "S" || spots[row][column] === "R") && (vehicle === "small")) {
       return [column, row];
-      } else if ((spots[row][column] === "M" || spots[row][column] === "S" || spots[row][column] === "R") && (vehicle === "motorcycle")){
+      }
+      else if ((spots[row][column] === "S" || spots[row][column] === "R") && (vehicle === "small")) {
       return [column, row];
-      } 
-      // else {
-      //   console.log("never");
-      // return false;
-      // }
+      } else if ((spots[row][column] === "M" || spots[row][column] === "S" || spots[row][column] === "R") && (vehicle === "motorcycle")) {
+      return [column, row];
+      }
     }
   }
+  return false;
 }
 
 console.log(whereCanIPark(
