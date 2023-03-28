@@ -2,7 +2,7 @@ const calculateChange = function(total, cash) {
   
   customerChange ={};
   
-  change = cash - total;
+  change = (cash - total) * 100;
  
   denominations = {
     twentyDollars: 2000,
@@ -18,18 +18,18 @@ const calculateChange = function(total, cash) {
 
   const changeCalc = function (change) {
 
-    while (change > 0 ) {
       for (d in denominations) {
+        console.log(change,">=", denominations[d],(change >= denominations[d]));
         if (change >= denominations[d]) {
           customerChange[d] = customerChange[d] + 1 || 1;
           change -= denominations[d];
           break
         }
       }
-    }
   }
+
   changeCalc(change)
   return (customerChange)
 }
 
-console.log(calculateChange(1787, 2000));
+console.log(calculateChange(16.55, 20));
