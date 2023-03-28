@@ -2,8 +2,8 @@ function writeMoney(value) {
   const words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
                  'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
   const tens = ['twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
-  const dollars = Math.floor(value);
-  const cents = Math.round((value - dollars) * 100);
+  let dollars = Math.floor(value);
+  let cents = Math.round((value - dollars) * 100);
   let result = '';
   if (dollars > 0) {
     if (dollars >= 1000000) {
@@ -42,5 +42,6 @@ function writeMoney(value) {
   }
   return result.trim();
 }
+
 
 console.log(writeMoney(50.60)); // Output: fifty dollars and sixty cents
