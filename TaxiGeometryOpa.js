@@ -21,6 +21,7 @@ const blocksAway = function(directions) {
   console.log("position: " + x + " " + y);
 // further steps
   for (i = 2 ; i < directions.length ; i += 2) {
+    
     if (newStep === 'right' && rightWay === 'east') {
       previousStep = 'east';
       x = x + directions[i + 1];
@@ -60,8 +61,10 @@ const blocksAway = function(directions) {
         rightWay = 'south';
         leftWay = 'north';
       } 
+      console.log("second step: " + newStep + " " + rightWay + " " + leftWay);
+      console.log("position: " + x + " " + y);
   } 
-  console.log(x, y);
+  console.log("final",x, y);
   output.east = x;
   output.north = y;
   return output;
