@@ -1,3 +1,17 @@
+import { expect } from 'chai'
+
+const judgeVegetable = function (vegetables, metric) {
+  let highest = 0;
+  let winner = '';
+  vegetables.forEach(function (vegetable) {
+    if (vegetable[metric] > highest) {
+      highest = vegetable[metric];
+      winner = vegetable.submitter;
+    }
+  });
+  return winner;
+}
+
 let vegetables = [
   {
     submitter: 'Old Man Franklin',
