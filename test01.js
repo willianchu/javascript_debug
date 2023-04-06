@@ -56,10 +56,10 @@ const judgeVegetable = function (vegetables, metric) {
 // Import the Mocha library and the Chai assertion library
 import { expect } from 'chai';
 import { describe, it } from 'mocha';
-console.log("judgeVegetable start testing rooting4U.js");
+
 // Import the function to be tested
 // const judgeVegetable = require('./judgeVegetable');
-
+console.log("judgeVegetable start testing");
 // Define the test suite
 describe('judgeVegetable', () => {
   // Define the test case for redness
