@@ -100,3 +100,9 @@ foo.should.be.a('string');
 foo.should.equal('bar');
 ```
 
+
+* Mocha Chai as development dependencies
+```bash
+npm install --save-dev mocha chai
+```
+
