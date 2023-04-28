@@ -18,4 +18,10 @@ console.log(array1);	// [1, 2, 3, 4, 5, 6] (the original array is modified)
 
 // using an a intermediate array it will not modify the original array and will keep the code cleaner and more readable.
 
-
+function concatenateArrays2(arr1, arr2) {
+  let newArr = arr1;
+  for (let i = 0; i < arr2.length; i++) {
+    newArr.push(arr2[i]);
+  }
+  return newArr;
+}
